@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie - Food Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🍴 Foodie</h1>
+        <p>Delicious food delivered to your door</p>
+    </header>
+
+    <main>
+
+        <!-- Search -->
+        <section class="search">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for food..."
+            >
+        </section>
+
+        <!-- Food Items -->
+        <section>
+            <h2>Food Menu</h2>
+
+            <div id="foodList" class="food-list">
+
+                <div class="food">
+                    <div class="food-image">🍕</div>
+                    <h3>Pizza</h3>
+                    <p>Cheesy delicious pizza</p>
+                    <strong>₹250</strong>
+                    <button onclick="addToCart('Pizza', 250)">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="food">
+                    <div class="food-image">🍔</div>
+                    <h3>Burger</h3>
+                    <p>Fresh and tasty burger</p>
+                    <strong>₹150</strong>
+                    <button onclick="addToCart('Burger', 150)">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="food">
+                    <div class="food-image">🍝</div>
+                    <h3>Pasta</h3>
+                    <p>Creamy Italian pasta</p>
+                    <strong>₹200</strong>
+                    <button onclick="addToCart('Pasta', 200)">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="food">
+                    <div class="food-image">🍜</div>
+                    <h3>Noodles</h3>
+                    <p>Hot and spicy noodles</p>
+                    <strong>₹120</strong>
+                    <button onclick="addToCart('Noodles', 120)">
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Cart -->
+        <section class="cart">
+            <h2>🛒 Your Cart</h2>
+
+            <div id="cartItems">
+                <p>Your cart is empty.</p>
+            </div>
+
+            <h3>Total: ₹<span id="total">0</span></h3>
+
+            <button id="orderButton" onclick="placeOrder()">
+                Place Order
+            </button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
